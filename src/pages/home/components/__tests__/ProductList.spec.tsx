@@ -226,10 +226,6 @@ describe('ProductList Component', () => {
       );
 
       // Assert: addCartItem 호출 및 toast 메시지 표시 확인
-      // expect(mockUseCartStore().addCartItem).toHaveBeenCalled();
-      // expect(mockUseToastStore().addToast).toHaveBeenCalledWith(
-      //   '장바구니 추가 완료!'
-      // );
       await waitFor(() => {
         expect(addCartItemMock).toHaveBeenCalledWith(
           expect.objectContaining({ id: '1', title: 'Product 1' }),
